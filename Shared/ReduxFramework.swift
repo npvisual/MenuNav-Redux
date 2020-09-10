@@ -58,16 +58,6 @@ struct AppState: Equatable {
 // MARK: - REDUCERS
 extension Reducer where ActionType == AppAction, StateType == AppState {
     static let app =
-//        Reducer<ProfileAction, User>.user.lift(
-//            action: \AppAction.profile,
-//            state: \AppState.currentUser
-//        ) <> Reducer<FamilyAction, [User]>.members.lift(
-//            action: \AppAction.members,
-//            state: \AppState.familyMembers
-//        ) <> Reducer<NavigationAction, AppState>.navigation.lift(
-//            action: \AppAction.navigation
-//        ) <>
-//
         Reducer<AppLifecycleAction, AppLifecycle>.lifecycle.lift(
             action: \AppAction.appLifecycle,
             state: \AppState.appLifecycle
