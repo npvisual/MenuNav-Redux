@@ -21,19 +21,19 @@ struct TopMenu<Label: View>: View {
             ForEach(contents) { content in
                 // In case this is an item
                 if case let .item(item) = content {
-                    TopMenuItem(item: item)
+                    TopItem(item: item)
                 }
 
                 // In case this is a submenu
                 if case let .submenu(text, contents) = content {
-                    TopSubmenu(text: text, contents: contents)
+                    Submenu(text: text, contents: contents)
                 }
             }
         } label: { label() }
     }
 }
 
-struct TopSubmenu: View {
+struct Submenu: View {
     let text: String
     let contents: [MenuContent]
 
@@ -47,10 +47,10 @@ struct TopSubmenu: View {
     }
 }
 
-struct TopMenuItem: View {
+struct TopItem: View {
     let item: MenuItem
 
-    func dispatch(_ action: ViewEvent) {
+    func dispatch(_ action: MenuEvent) {
         // todo: call viewModel.dispatch
         print("Sending action \(action)")
     }
@@ -78,7 +78,7 @@ struct TopMenuItem: View {
 
 struct TopMenu_Previews: PreviewProvider {
     
-    static let menu = ViewState.default.menu
+    static let menu = MenuState.default.menu
     
     static var previews: some View {
         TopMenu(contents: menu) {

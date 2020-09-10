@@ -7,22 +7,20 @@
 
 import Foundation
 
-enum ViewEvent {
-    case profileTapped
-    case familyMembersTapped
-    case eventsTapped
-    case foldersTapped
-    case deletedItemsTapped
+enum MenuEvent {
+    case item1Tapped
+    case item2Tapped
+    case item3Tapped
 }
 
-struct MenuItem: Identifiable {
+struct MenuItem: Identifiable, Equatable {
     var id: String { return text }
     let text: String
     let systemImage: String?
-    let action: ViewEvent?
+    let action: MenuEvent?
 }
 
-enum MenuContent: Identifiable {
+enum MenuContent: Identifiable, Equatable {
     var id: String {
         switch self {
         case let .item(item): return item.id
@@ -34,19 +32,27 @@ enum MenuContent: Identifiable {
     indirect case submenu(text: String, content: [MenuContent])
 }
 
-struct ViewState {
+struct MenuState: Equatable {
     let menu: [MenuContent]
     let content: String
 
-    static var `default`: ViewState {
+    static var empty: MenuState {
+        .init(
+            menu: [],
+            content: ""
+        )
+        
+    }
+    
+    static var `default`: MenuState {
         .init(
             menu: [
-                .item(MenuItem(text: "Profile", systemImage: "person", action: .profileTapped)),
-                .item(MenuItem(text: "Family Members", systemImage: "person.3", action: .familyMembersTapped)),
-                .item(MenuItem(text: "Events", systemImage: "calendar", action: .familyMembersTapped)),
+                .item(MenuItem(text: "Profile", systemImage: "person", action: .item1Tapped)),
+                .item(MenuItem(text: "Family Members", systemImage: "person.3", action: .item2Tapped)),
+                .item(MenuItem(text: "Events", systemImage: "calendar", action: .item3Tapped)),
                 .submenu(text: "More", content: [
-                    .item(MenuItem(text: "Folders", systemImage: "folder.fill", action: .foldersTapped)),
-                    .item(MenuItem(text: "Deleted", systemImage: "trash.fill", action: .deletedItemsTapped))
+                    .item(MenuItem(text: "Folders", systemImage: "folder.fill", action: nil)),
+                    .item(MenuItem(text: "Deleted", systemImage: "trash.fill", action: nil))
                 ])
             ],
             content: "Content")

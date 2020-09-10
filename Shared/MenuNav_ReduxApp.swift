@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import CombineRex
 
 @main
 struct MenuNav_ReduxApp: App {
     
-    let viewState: ViewState = ViewState.default
+    @StateObject var store = World
+        .origin
+        .store()
+        .asObservableViewModel(initialState: .empty)
     
     var body: some Scene {
         WindowGroup {
             ContentView(
-                viewSelection: true,
-                viewState: viewState
+                viewModel: ObservableViewModel.content(store: store),
+                menuModel: ObservableViewModel.menu(store: store)
             )
         }
     }

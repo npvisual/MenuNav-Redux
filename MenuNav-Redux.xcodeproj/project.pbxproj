@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1CAC39250A7F7B0086E311 /* CombineRextensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8E1CAC38250A7F7B0086E311 /* CombineRextensions */; };
+		8E22B1B7250AA385009E340C /* ContentOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1B6250AA385009E340C /* ContentOne.swift */; };
+		8E22B1B8250AA385009E340C /* ContentOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1B6250AA385009E340C /* ContentOne.swift */; };
+		8E22B1BA250AA3C9009E340C /* ContentTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1B9250AA3C9009E340C /* ContentTwo.swift */; };
+		8E22B1BB250AA3C9009E340C /* ContentTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1B9250AA3C9009E340C /* ContentTwo.swift */; };
+		8E22B1BD250AA3D4009E340C /* ContentThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1BC250AA3D4009E340C /* ContentThree.swift */; };
+		8E22B1BE250AA3D4009E340C /* ContentThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22B1BC250AA3D4009E340C /* ContentThree.swift */; };
 		8ED44F8E250A6D1C0042F0D0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44F8D250A6D1C0042F0D0 /* Tests_iOS.swift */; };
 		8ED44F99250A6D1C0042F0D0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44F98250A6D1C0042F0D0 /* Tests_macOS.swift */; };
 		8ED44F9B250A6D1C0042F0D0 /* MenuNav_ReduxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44F72250A6D1B0042F0D0 /* MenuNav_ReduxApp.swift */; };
@@ -19,6 +26,16 @@
 		8ED44FB1250A73520042F0D0 /* TopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FAF250A73520042F0D0 /* TopMenu.swift */; };
 		8ED44FB3250A73730042F0D0 /* TopMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */; };
 		8ED44FB4250A73730042F0D0 /* TopMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */; };
+		8ED79894250A7C9A0095CF53 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED79893250A7C9A0095CF53 /* ContentViewModel.swift */; };
+		8ED79895250A7C9A0095CF53 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED79893250A7C9A0095CF53 /* ContentViewModel.swift */; };
+		8EE55485250A87D9009AA3F4 /* CombineRex in Frameworks */ = {isa = PBXBuildFile; productRef = 8EE55484250A87D9009AA3F4 /* CombineRex */; };
+		8EE55487250A8D7B009AA3F4 /* ReduxFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE55486250A8D7B009AA3F4 /* ReduxFramework.swift */; };
+		8EE55488250A8D7B009AA3F4 /* ReduxFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE55486250A8D7B009AA3F4 /* ReduxFramework.swift */; };
+		8EE5548B250A8DFD009AA3F4 /* LoggerMiddleware in Frameworks */ = {isa = PBXBuildFile; productRef = 8EE5548A250A8DFD009AA3F4 /* LoggerMiddleware */; };
+		8EE5548E250A8E9F009AA3F4 /* AppLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5548C250A8E9F009AA3F4 /* AppLifecycle.swift */; };
+		8EE5548F250A8E9F009AA3F4 /* AppLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5548C250A8E9F009AA3F4 /* AppLifecycle.swift */; };
+		8EE55490250A8E9F009AA3F4 /* ActionPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5548D250A8E9F009AA3F4 /* ActionPrism.swift */; };
+		8EE55491250A8E9F009AA3F4 /* ActionPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5548D250A8E9F009AA3F4 /* ActionPrism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +55,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8E1CAC36250A7F010086E311 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8E22B1B6250AA385009E340C /* ContentOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentOne.swift; sourceTree = "<group>"; };
+		8E22B1B9250AA3C9009E340C /* ContentTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTwo.swift; sourceTree = "<group>"; };
+		8E22B1BC250AA3D4009E340C /* ContentThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentThree.swift; sourceTree = "<group>"; };
 		8ED44F72250A6D1B0042F0D0 /* MenuNav_ReduxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNav_ReduxApp.swift; sourceTree = "<group>"; };
 		8ED44F73250A6D1B0042F0D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8ED44F74250A6D1C0042F0D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +88,10 @@
 		8ED44F9A250A6D1C0042F0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ED44FAF250A73520042F0D0 /* TopMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenu.swift; sourceTree = "<group>"; };
 		8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuViewModel.swift; sourceTree = "<group>"; };
+		8ED79893250A7C9A0095CF53 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		8EE55486250A8D7B009AA3F4 /* ReduxFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxFramework.swift; sourceTree = "<group>"; };
+		8EE5548C250A8E9F009AA3F4 /* AppLifecycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycle.swift; sourceTree = "<group>"; };
+		8EE5548D250A8E9F009AA3F4 /* ActionPrism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrism.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE55485250A87D9009AA3F4 /* CombineRex in Frameworks */,
+				8EE5548B250A8DFD009AA3F4 /* LoggerMiddleware in Frameworks */,
+				8E1CAC39250A7F7B0086E311 /* CombineRextensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,11 +144,18 @@
 		8ED44F71250A6D1B0042F0D0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8EE5548D250A8E9F009AA3F4 /* ActionPrism.swift */,
+				8EE5548C250A8E9F009AA3F4 /* AppLifecycle.swift */,
 				8ED44F72250A6D1B0042F0D0 /* MenuNav_ReduxApp.swift */,
 				8ED44F73250A6D1B0042F0D0 /* ContentView.swift */,
+				8ED79893250A7C9A0095CF53 /* ContentViewModel.swift */,
 				8ED44FAF250A73520042F0D0 /* TopMenu.swift */,
 				8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */,
+				8EE55486250A8D7B009AA3F4 /* ReduxFramework.swift */,
 				8ED44F74250A6D1C0042F0D0 /* Assets.xcassets */,
+				8E22B1B6250AA385009E340C /* ContentOne.swift */,
+				8E22B1B9250AA3C9009E340C /* ContentTwo.swift */,
+				8E22B1BC250AA3D4009E340C /* ContentThree.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -169,12 +216,18 @@
 				8ED44F75250A6D1C0042F0D0 /* Sources */,
 				8ED44F76250A6D1C0042F0D0 /* Frameworks */,
 				8ED44F77250A6D1C0042F0D0 /* Resources */,
+				8E1CAC36250A7F010086E311 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "MenuNav-Redux (iOS)";
+			packageProductDependencies = (
+				8E1CAC38250A7F7B0086E311 /* CombineRextensions */,
+				8EE55484250A87D9009AA3F4 /* CombineRex */,
+				8EE5548A250A8DFD009AA3F4 /* LoggerMiddleware */,
+			);
 			productName = "MenuNav-Redux (iOS)";
 			productReference = 8ED44F79250A6D1C0042F0D0 /* MenuNav-Redux.app */;
 			productType = "com.apple.product-type.application";
@@ -266,6 +319,11 @@
 				Base,
 			);
 			mainGroup = 8ED44F6C250A6D1B0042F0D0;
+			packageReferences = (
+				8E1CAC37250A7F7B0086E311 /* XCRemoteSwiftPackageReference "CombineRextensions" */,
+				8EE55483250A87D9009AA3F4 /* XCRemoteSwiftPackageReference "SwiftRex" */,
+				8EE55489250A8DFD009AA3F4 /* XCRemoteSwiftPackageReference "LoggerMiddleware" */,
+			);
 			productRefGroup = 8ED44F7A250A6D1C0042F0D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +378,13 @@
 				8ED44FB3250A73730042F0D0 /* TopMenuViewModel.swift in Sources */,
 				8ED44FB0250A73520042F0D0 /* TopMenu.swift in Sources */,
 				8ED44F9B250A6D1C0042F0D0 /* MenuNav_ReduxApp.swift in Sources */,
+				8EE55487250A8D7B009AA3F4 /* ReduxFramework.swift in Sources */,
+				8E22B1BD250AA3D4009E340C /* ContentThree.swift in Sources */,
+				8EE55490250A8E9F009AA3F4 /* ActionPrism.swift in Sources */,
+				8E22B1B7250AA385009E340C /* ContentOne.swift in Sources */,
+				8ED79894250A7C9A0095CF53 /* ContentViewModel.swift in Sources */,
+				8E22B1BA250AA3C9009E340C /* ContentTwo.swift in Sources */,
+				8EE5548E250A8E9F009AA3F4 /* AppLifecycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +396,13 @@
 				8ED44FB4250A73730042F0D0 /* TopMenuViewModel.swift in Sources */,
 				8ED44FB1250A73520042F0D0 /* TopMenu.swift in Sources */,
 				8ED44F9C250A6D1C0042F0D0 /* MenuNav_ReduxApp.swift in Sources */,
+				8EE55488250A8D7B009AA3F4 /* ReduxFramework.swift in Sources */,
+				8E22B1BE250AA3D4009E340C /* ContentThree.swift in Sources */,
+				8EE55491250A8E9F009AA3F4 /* ActionPrism.swift in Sources */,
+				8E22B1B8250AA385009E340C /* ContentOne.swift in Sources */,
+				8ED79895250A7C9A0095CF53 /* ContentViewModel.swift in Sources */,
+				8E22B1BB250AA3C9009E340C /* ContentTwo.swift in Sources */,
+				8EE5548F250A8E9F009AA3F4 /* AppLifecycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +780,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E1CAC37250A7F7B0086E311 /* XCRemoteSwiftPackageReference "CombineRextensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/teufelaudio/CombineRextensions.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8EE55483250A87D9009AA3F4 /* XCRemoteSwiftPackageReference "SwiftRex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftRex/SwiftRex.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.4;
+			};
+		};
+		8EE55489250A8DFD009AA3F4 /* XCRemoteSwiftPackageReference "LoggerMiddleware" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftRex/LoggerMiddleware.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E1CAC38250A7F7B0086E311 /* CombineRextensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E1CAC37250A7F7B0086E311 /* XCRemoteSwiftPackageReference "CombineRextensions" */;
+			productName = CombineRextensions;
+		};
+		8EE55484250A87D9009AA3F4 /* CombineRex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EE55483250A87D9009AA3F4 /* XCRemoteSwiftPackageReference "SwiftRex" */;
+			productName = CombineRex;
+		};
+		8EE5548A250A8DFD009AA3F4 /* LoggerMiddleware */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EE55489250A8DFD009AA3F4 /* XCRemoteSwiftPackageReference "LoggerMiddleware" */;
+			productName = LoggerMiddleware;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8ED44F6D250A6D1B0042F0D0 /* Project object */;
 }
