@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             .navigationBarItems(
                 leading: TopMenu(contents: menuModel.state.menu) {
-                    Image(systemName: "line.horizontal.3")
+                    Image(systemName: viewModel.state.menuTopIconName)
                 }
             )
         }

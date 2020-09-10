@@ -134,7 +134,8 @@ extension ObservableViewModel where ViewAction == ContentView.ViewEvent, ViewSta
         }
         
         return ContentView.ViewState(
-            selectedView: selection
+            selectedView: selection,
+            menuTopIconName: state.menuIconName
         )
     }
 }

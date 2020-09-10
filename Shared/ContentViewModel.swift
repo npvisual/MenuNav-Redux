@@ -16,9 +16,11 @@ extension ContentView {
     
     struct ViewState: Equatable {
         var selectedView: ViewSelection
+        var menuTopIconName: String
         
         static let empty = ViewState(
-            selectedView: .view1
+            selectedView: .view1,
+            menuTopIconName: ""
         )
     }
     
