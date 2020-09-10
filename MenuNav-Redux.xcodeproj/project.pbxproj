@@ -15,6 +15,10 @@
 		8ED44F9E250A6D1C0042F0D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44F73250A6D1B0042F0D0 /* ContentView.swift */; };
 		8ED44F9F250A6D1C0042F0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED44F74250A6D1C0042F0D0 /* Assets.xcassets */; };
 		8ED44FA0250A6D1C0042F0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED44F74250A6D1C0042F0D0 /* Assets.xcassets */; };
+		8ED44FB0250A73520042F0D0 /* TopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FAF250A73520042F0D0 /* TopMenu.swift */; };
+		8ED44FB1250A73520042F0D0 /* TopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FAF250A73520042F0D0 /* TopMenu.swift */; };
+		8ED44FB3250A73730042F0D0 /* TopMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */; };
+		8ED44FB4250A73730042F0D0 /* TopMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		8ED44F94250A6D1C0042F0D0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED44F98250A6D1C0042F0D0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		8ED44F9A250A6D1C0042F0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED44FAF250A73520042F0D0 /* TopMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenu.swift; sourceTree = "<group>"; };
+		8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 			children = (
 				8ED44F72250A6D1B0042F0D0 /* MenuNav_ReduxApp.swift */,
 				8ED44F73250A6D1B0042F0D0 /* ContentView.swift */,
+				8ED44FAF250A73520042F0D0 /* TopMenu.swift */,
+				8ED44FB2250A73730042F0D0 /* TopMenuViewModel.swift */,
 				8ED44F74250A6D1C0042F0D0 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -309,6 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED44F9D250A6D1C0042F0D0 /* ContentView.swift in Sources */,
+				8ED44FB3250A73730042F0D0 /* TopMenuViewModel.swift in Sources */,
+				8ED44FB0250A73520042F0D0 /* TopMenu.swift in Sources */,
 				8ED44F9B250A6D1C0042F0D0 /* MenuNav_ReduxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED44F9E250A6D1C0042F0D0 /* ContentView.swift in Sources */,
+				8ED44FB4250A73730042F0D0 /* TopMenuViewModel.swift in Sources */,
+				8ED44FB1250A73520042F0D0 /* TopMenu.swift in Sources */,
 				8ED44F9C250A6D1C0042F0D0 /* MenuNav_ReduxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

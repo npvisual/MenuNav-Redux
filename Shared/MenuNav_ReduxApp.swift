@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct MenuNav_ReduxApp: App {
+    
+    let viewState: ViewState = ViewState.default
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                viewSelection: true,
+                viewState: viewState
+            )
         }
     }
 }
