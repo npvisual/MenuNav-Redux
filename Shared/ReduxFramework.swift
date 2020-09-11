@@ -35,6 +35,18 @@ struct AppState: Equatable {
     var menuContent2IconName: String = "2.circle"
     var menuContent3Title: String = "Content 3"
     var menuContent3IconName: String = "3.circle"
+    var subMenuTitle: String = "SubMenu"
+    var subMenuIconName: String = "chevron.right"
+    var subMenuContent1Title: String = "SubMenu 1"
+    var subMenuContent1IconName: String = "folder.fill"
+    var subMenuContent2Title: String = "SubMenu 2"
+    var subMenucontent2IconName: String = "trash.fill"
+    var subSubMenuTitle: String = "SubSubMenu"
+    var subSubMenuIconName: String = "chevron.right"
+    var subSubMenuContent1Title: String = "SubSubMenu 1"
+    var subSubMenuContent1IconName: String = "folder.fill"
+    var subSubMenuContent2Title: String = "SubSubMenu 2"
+    var subSubMenucontent2IconName: String = "trash.fill"
 
     enum ContentSelection {
         case content1
@@ -162,7 +174,21 @@ extension ObservableViewModel where ViewAction == MenuEvent, ViewState == MenuSt
             menu: [
                 .item(MenuItem(text: state.menuContent1Title, systemImage: state.menuContent1IconName, action: .item1Tapped)),
                 .item(MenuItem(text: state.menuContent2Title, systemImage: state.menuContent2IconName, action: .item2Tapped)),
-                .item(MenuItem(text: state.menuContent3Title, systemImage: state.menuContent3IconName, action: .item3Tapped))
+                .item(MenuItem(text: state.menuContent3Title, systemImage: state.menuContent3IconName, action: .item3Tapped)),
+                .submenu(
+                    item: MenuItem(text: state.subMenuTitle, systemImage: state.subMenuIconName, action: nil),
+                    content: [
+                        .submenu(
+                            item: MenuItem(text: state.subSubMenuTitle, systemImage: state.subSubMenuIconName, action: nil),
+                            content: [
+                                .item(MenuItem(text: state.subSubMenuContent1Title, systemImage: state.subSubMenuContent1IconName, action: nil)),
+                                .item(MenuItem(text: state.subSubMenuContent2Title, systemImage: state.subSubMenucontent2IconName, action: nil))
+                            ]
+                        ),
+                        .item(MenuItem(text: state.subMenuContent1Title, systemImage: state.subMenuContent1IconName, action: nil)),
+                        .item(MenuItem(text: state.subMenuContent2Title, systemImage: state.subMenucontent2IconName, action: nil))
+                    ]
+                )
             ]
         )
     }
