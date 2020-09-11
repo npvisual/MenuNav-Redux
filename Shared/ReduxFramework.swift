@@ -128,13 +128,8 @@ extension ObservableViewModel where ViewAction == ContentView.ViewEvent, ViewSta
     static func content<S: StoreType>(store: S) -> ObservableViewModel
     where S.ActionType == AppAction, S.StateType == AppState {
         return store
-            .projection(action: Self.transform, state: Self.transform)
+            .projection(action: { _ in nil }, state: Self.transform)
             .asObservableViewModel(initialState: .empty)
-    }
-    
-    private static func transform(_ viewAction: ContentView.ViewEvent) -> AppAction? {
-        switch viewAction {
-        }
     }
     
     private static func transform(from state: AppState) -> ContentView.ViewState {
