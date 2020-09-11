@@ -23,18 +23,21 @@ struct TopMenu<Label: View>: View {
             ForEach(viewModel.state.menu) { content in
                 // In case this is an item
                 if case let .item(item) = content {
-                    let newViewModel = ObservableViewModel.menu(
-                        store: viewModel.asObservableViewModel(
-                            initialState: MenuState(item: item, menu: [])
+                    let newViewModel = ObservableViewModel.recursion(
+                        store: viewModel,
+                        newState: MenuState(item: item, menu: [])
                         )
-                    )
                     TopItem(viewModel: newViewModel)
                 }
 
                 // In case this is a submenu
                 if case let .submenu(item, contents) = content {
+                    let newViewModel = ObservableViewModel.recursion(
+                        store: viewModel,
+                        newState: MenuState(item: item, menu: contents)
+                        )
                     Submenu(
-                        viewModel: viewModel
+                        viewModel: newViewModel
                     )
                 }
             }
@@ -59,7 +62,6 @@ struct Submenu: View {
 
 struct TopItem: View {
     @ObservedObject var viewModel: ObservableViewModel<MenuEvent, MenuState>
-
 
     func dispatch(_ action: MenuEvent) {
         // todo: call viewModel.dispatch

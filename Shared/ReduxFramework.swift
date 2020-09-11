@@ -167,3 +167,12 @@ extension ObservableViewModel where ViewAction == MenuEvent, ViewState == MenuSt
         )
     }
 }
+
+extension ObservableViewModel where ViewAction == MenuEvent, ViewState == MenuState {
+    static func recursion<S: StoreType>(store: S, newState: MenuState) -> ObservableViewModel
+    where S.ActionType == MenuEvent, S.StateType == MenuState {
+        return store
+            .projection(action: { $0 }, state: { _ in MenuState(item: newState.item, menu: newState.menu) })
+            .asObservableViewModel(initialState: .empty)
+    }    
+}
