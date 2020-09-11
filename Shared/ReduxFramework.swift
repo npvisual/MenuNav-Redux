@@ -158,11 +158,12 @@ extension ObservableViewModel where ViewAction == MenuEvent, ViewState == MenuSt
     
     private static func transform(from state: AppState) -> MenuState {
         MenuState(
+            item: MenuItem(text: "", systemImage: state.menuIconName, action: nil),
             menu: [
                 .item(MenuItem(text: state.menuContent1Title, systemImage: state.menuContent1IconName, action: nil)),
                 .item(MenuItem(text: state.menuContent2Title, systemImage: state.menuContent2IconName, action: nil)),
                 .item(MenuItem(text: state.menuContent3Title, systemImage: state.menuContent3IconName, action: nil))
-            ],
-            content: "Content")
+            ]
+        )
     }
 }

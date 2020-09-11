@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CombineRex
+import SwiftRex
 
 enum MenuEvent {
     case item1Tapped
@@ -24,37 +26,38 @@ enum MenuContent: Identifiable, Equatable {
     var id: String {
         switch self {
         case let .item(item): return item.id
-        case let .submenu(text, _): return text
+        case let .submenu(item, _): return item.text
         }
     }
 
     case item(MenuItem)
-    indirect case submenu(text: String, content: [MenuContent])
+    indirect case submenu(item: MenuItem, content: [MenuContent])
 }
 
 struct MenuState: Equatable {
+    let item: MenuItem
     let menu: [MenuContent]
-    let content: String
 
     static var empty: MenuState {
         .init(
-            menu: [],
-            content: ""
+            item: MenuItem(text: "", systemImage: nil, action: nil),
+            menu: []
         )
         
     }
     
     static var `default`: MenuState {
         .init(
+            item: MenuItem(text: "", systemImage: "line.horizontal.3", action: nil),
             menu: [
                 .item(MenuItem(text: "Profile", systemImage: "person", action: .item1Tapped)),
                 .item(MenuItem(text: "Family Members", systemImage: "person.3", action: .item2Tapped)),
                 .item(MenuItem(text: "Events", systemImage: "calendar", action: .item3Tapped)),
-                .submenu(text: "More", content: [
+                .submenu(item: MenuItem(text: "More", systemImage: "chevron.right", action: nil), content: [
                     .item(MenuItem(text: "Folders", systemImage: "folder.fill", action: nil)),
                     .item(MenuItem(text: "Deleted", systemImage: "trash.fill", action: nil))
                 ])
-            ],
-            content: "Content")
+            ]
+        )
     }
 }

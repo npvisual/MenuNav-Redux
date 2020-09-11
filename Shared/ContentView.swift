@@ -36,7 +36,7 @@ struct ContentView: View {
                 }
             }
             .navigationBarItems(
-                leading: TopMenu(contents: menuModel.state.menu) {
+                leading: TopMenu(viewModel: menuModel) {
                     Image(systemName: viewModel.state.menuTopIconName)
                 }
             )
