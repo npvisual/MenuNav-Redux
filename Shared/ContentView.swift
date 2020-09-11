@@ -17,18 +17,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Button(
-                    action: { menuModel.dispatch(.item1Tapped) },
-                    label: { Text("Show view 1") }
-                )
-                Button(
-                    action: { menuModel.dispatch(.item2Tapped) },
-                    label: { Text("Show view 2") }
-                )
-                Button(
-                    action: { menuModel.dispatch(.item3Tapped) },
-                    label: { Text("Show view 3") }
-                )
                 switch viewModel.state.selectedView {
                 case .view1: ContentOne()
                 case .view2: ContentTwo()

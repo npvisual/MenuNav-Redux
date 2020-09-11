@@ -160,9 +160,9 @@ extension ObservableViewModel where ViewAction == MenuEvent, ViewState == MenuSt
         MenuState(
             item: MenuItem(text: "", systemImage: state.menuIconName, action: nil),
             menu: [
-                .item(MenuItem(text: state.menuContent1Title, systemImage: state.menuContent1IconName, action: nil)),
-                .item(MenuItem(text: state.menuContent2Title, systemImage: state.menuContent2IconName, action: nil)),
-                .item(MenuItem(text: state.menuContent3Title, systemImage: state.menuContent3IconName, action: nil))
+                .item(MenuItem(text: state.menuContent1Title, systemImage: state.menuContent1IconName, action: .item1Tapped)),
+                .item(MenuItem(text: state.menuContent2Title, systemImage: state.menuContent2IconName, action: .item2Tapped)),
+                .item(MenuItem(text: state.menuContent3Title, systemImage: state.menuContent3IconName, action: .item3Tapped))
             ]
         )
     }

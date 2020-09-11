@@ -65,7 +65,7 @@ struct TopItem: View {
 
     func dispatch(_ action: MenuEvent) {
         // todo: call viewModel.dispatch
-        print("Sending action \(action)")
+        viewModel.dispatch(action)
     }
 
     init(viewModel: ObservableViewModel<MenuEvent, MenuState>) {
